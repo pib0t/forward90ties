@@ -56,7 +56,7 @@ async function callGeminiWithRetry(imagePart: object, textPart: object): Promise
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
         try {
             return await ai.models.generateContent({
-                model: 'gemini-2.5-flash-image',
+                model: 'gemini-3.1-flash-lite-image',
                 contents: { parts: [imagePart, textPart] },
             });
         } catch (error) {
