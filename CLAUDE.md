@@ -44,7 +44,7 @@ Wraps `@google/genai` with two resilience layers:
 1. **Retry on 500/INTERNAL**: up to 3 attempts with exponential backoff (1s, 2s, 4s)
 2. **Fallback prompt**: if the model returns text instead of an image (typically due to content policy in certain regions), it retries with a simpler generic prompt via `getFallbackPrompt()`
 
-The model used is `gemini-2.5-flash-image`. All images are passed and returned as `data:image/...;base64,...` strings — nothing is uploaded to any server.
+The model used is `gemini-3.1-flash-lite-image`. All images are passed and returned as `data:image/...;base64,...` strings — nothing is uploaded to any server.
 
 ### `components/PolaroidCard.tsx`
 
